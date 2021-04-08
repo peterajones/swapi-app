@@ -1,0 +1,70 @@
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+body {
+	background-image: url('./img/BANNERstarwars3.jpg');
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: black;
+	color: snow;
+}
+main {
+	position: relative;
+	max-width: 540px;
+	margin: 0 auto;
+}
+.App {
+	position: relative;
+	text-align: center;
+	top: 4vh;
+}
+.App > h1 {
+	padding: 2rem 0;
+	color: gold;
+}
+section.characters > h2 {
+	padding: 0.8rem 0;
+	text-align: left;
+	color: deepskyblue;
+}
+select.characters {
+	position: relative;
+	display: flex;
+	padding: 6px;
+	font-size: 1.4rem;
+	width: 300px;
+	text-align: left;
+}
+.movies-section {
+	text-align: left;
+}
+.movies-section > h2 {
+	padding: 1.5rem 0 1.2rem;
+	color: deepskyblue;
+}
+.movie-titles {
+	position: relative;
+	bottom: 20px;
+}
+.movie-titles p {
+	font-size: 1.8rem;
+	margin-bottom: 0;
+}
+.last-movie > h2 {
+	padding: 1.5rem 0 1.2rem;
+	color: deepskyblue;
+}
+.last-movie > p {
+	position: relative;
+	font-size: 1.8rem;
+	bottom: 20px;
+}
+p.loading {
+	font-size: 1.8rem;
+	color: gold;
+	font-style: italic;
+}
