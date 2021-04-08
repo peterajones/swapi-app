@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
-export default function Movies({ selected }) {
+export default function Movies({ isSelected }) {
 	const url = 'https://swapi.dev/api';
 	const [movieUrl, setMovieUrl] = useState([]);
 	const [movieTitles, setMovieTitles] = useState([]);
 	const [lastTitle, setLastTitle] = useState([]);
 	const [isLoading, setIsLoading] = useState(true);
 
-	const charName = selected.split(' ')[0];
+	const charName = isSelected.split(' ')[0];
 
 	useEffect(() => {
 		const fetchPeople = async () => {
@@ -35,14 +35,13 @@ export default function Movies({ selected }) {
 			setIsLoading(false);
 			setMovieTitles(moviesList);
 
-			// console.log(moviesList);
-
 			if (
 				moviesList !== [] ||
 				moviesList !== undefined ||
 				moviesList !== null
 			) {
-				setLastTitle(Object.values(moviesList[moviesList.length - 1]));
+				moviesList &&
+					setLastTitle(Object.values(moviesList[moviesList.length - 1]));
 			}
 		};
 		fetchTitles();

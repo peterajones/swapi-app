@@ -1,3 +1,10 @@
+:root {
+	--sw-gold: #ffe81f;
+	--sw-blue: #5776cc;
+	--sw-black: #000000;
+	--sw-white: #fffafa;
+}
+
 html,
 body {
 	width: 100%;
@@ -9,8 +16,8 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-color: black;
-	color: snow;
+	background-color: var(--sw-black);
+	color: var(--sw-white);
 }
 main {
 	position: relative;
@@ -20,16 +27,17 @@ main {
 .App {
 	position: relative;
 	text-align: center;
-	top: 4vh;
+	padding: 0 20px;
 }
 .App > h1 {
 	padding: 2rem 0;
-	color: gold;
+	color: var(--sw-gold);
 }
 section.characters > h2 {
-	padding: 0.8rem 0;
+	padding: 1rem 0;
+	margin: 0;
 	text-align: left;
-	color: deepskyblue;
+	color: var(--sw-blue);
 }
 select.characters {
 	position: relative;
@@ -40,11 +48,13 @@ select.characters {
 	text-align: left;
 }
 .movies-section {
+	position: relative;
+	top: 20px;
 	text-align: left;
 }
 .movies-section > h2 {
 	padding: 1.5rem 0 1.2rem;
-	color: deepskyblue;
+	color: var(--sw-blue);
 }
 .movie-titles {
 	position: relative;
@@ -56,7 +66,11 @@ select.characters {
 }
 .last-movie > h2 {
 	padding: 1.5rem 0 1.2rem;
-	color: deepskyblue;
+	color: var(--sw-blue);
+}
+.last-movie {
+	position: relative;
+	bottom: 10px;
 }
 .last-movie > p {
 	position: relative;
@@ -64,7 +78,9 @@ select.characters {
 	bottom: 20px;
 }
 p.loading {
+	position: relative;
+	bottom: 20px;
 	font-size: 1.8rem;
-	color: gold;
+	color: var(--sw-gold);
 	font-style: italic;
 }

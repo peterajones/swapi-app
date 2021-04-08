@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import Movies from './Movies';
 
 export default function Characters({ characters }) {
-	const [selected, setSelected] = useState('');
+	const [isSelected, setIsSelected] = useState('');
 
 	const handleCharacterChange = e => {
 		const name = e.target.value;
 		e.preventDefault();
-		setSelected(name);
+		setIsSelected(name);
 	};
 
 	return (
@@ -25,7 +25,7 @@ export default function Characters({ characters }) {
 					);
 				})}
 			</select>
-			<Movies selected={selected} />
+			<Movies isSelected={isSelected} />
 		</section>
 	);
 }
