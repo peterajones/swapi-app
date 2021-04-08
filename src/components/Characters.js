@@ -14,7 +14,7 @@ export default function Characters({ characters }) {
 		<section className='characters'>
 			<h2>Characters</h2>
 			<select className='characters' onChange={handleCharacterChange}>
-				<option key='aaa' value=''>
+				<option key='aaa' value='selected' selected>
 					Select a Character
 				</option>
 				{characters.map(character => {
